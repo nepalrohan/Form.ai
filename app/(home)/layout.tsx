@@ -1,4 +1,5 @@
 import Logo from "@/components/Logo"
+import DarkMode from "@/components/DarkMode"
 import {UserButton} from "@clerk/nextjs"
 import { Button } from "@/components/ui/button"
 
@@ -6,6 +7,7 @@ import { Button } from "@/components/ui/button"
 const layout = ({children}:{
     children:React.ReactNode
 }) => {
+
   return (
     <div>
 
@@ -17,7 +19,9 @@ const layout = ({children}:{
 
 <Button variant={'link'}>Dashboard</Button>
 <UserButton/>
+<DarkMode/>
 </div>
+
 </nav>
         </div>
 
