@@ -1,8 +1,8 @@
 
 const PageNotFound = () =>{
 return (
-    <div>
-        Page Not Found
+    <div className='h-screen w-screen flex items-center justify-center'>
+     <h1 className='font-bold text-3xl text-gray-500 '>Oops!😔 Page Not Found</h1>
     </div>
 )
 }
