@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import GenerateFormInput from './GenerateFormInput'
 import { Button } from './ui/button';
 
@@ -25,6 +27,8 @@ const suggestionBtnText:SuggestionText[] = [
   ];
   
 const HeroSection = () => {
+const [text, setText] = useState<string>("")
+
   return (
  <section>
     <div className='relative '>
@@ -34,16 +38,18 @@ const HeroSection = () => {
 
     <div className=' container text-center mx-auto relative '>
     <h1 className='text-4xl  font-bold '>Build Forms Effortessly Using  AI</h1>
-    <p className='mt-4 text-lg text-slate-700 '>Harness the power of AI to craft stunning, dynamic forms instantly, with unmatched speed and precision</p>
+    <p className='mt-4 text-lg text-slate-700 dark:text-gray-400'>Harness the power of AI to craft stunning, dynamic forms instantly, with unmatched speed and precision</p>
 </div>
 
     </div>
-<GenerateFormInput/>
+<GenerateFormInput text={text} />
 
 <div className='grid grid-cols-4 gap-3'>
 {
     suggestionBtnText.map((item:SuggestionText, index:number)=>(
-        <Button key={index} variant={'outline'} className="rounded-full h-10 border-gray-300 shadow-md">{item.label}</Button>
+        <Button
+        onClick={()=>setText(item.text)}
+        key={index} variant={'outline'} className="rounded-full h-10 border-gray-300 shadow-md">{item.label}</Button>
     ))
 }
 </div>

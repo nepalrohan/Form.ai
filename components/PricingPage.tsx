@@ -19,8 +19,8 @@ const PricingPage = ()=>{
     return (
       <div>
         <div className='text-center mb-16 '>
-  <h1 className='font-extrabold text-3xl text-slate-800'>Plans & Pricing</h1>
-  <p className='text-gray-500'>Receive unlimited credits when you pay early</p>
+  <h1 className='font-extrabold text-3xl text-slate-800 dark:text-gray-200'>Plans & Pricing</h1>
+  <p className='text-gray-500 dark:text-gray-300'>Receive unlimited credits when you pay early</p>
 </div>
         <div className='grid grid-cols-3 gap-6'>
 
@@ -28,7 +28,7 @@ const PricingPage = ()=>{
 
 {
   pricingPlan.map((plan:PricingPlan, index:number)=>(
-        <Card key={index} className={`w-[350px]  bg-gray-200 flex flex-col justify-between shadow-md  ${plan.level==="Enterprise"? "bg-slate-900 text-white":"null"}`}>
+        <Card key={index} className={`w-[350px] flex flex-col justify-between shadow-md dark:shadow-gray-300  ${plan.level==="Enterprise"? "bg-slate-900 text-white":"null"}`}>
         <CardHeader className="flex  flex-row items-center gap-2">
           <CardTitle >{plan.level}</CardTitle>
           {
@@ -40,7 +40,7 @@ const PricingPage = ()=>{
          <p className='text-2xl font-bold '>{plan.price}</p>
          <ul className='mt-4 space-y-2'>{
           plan.services.map((item:string, index:number)=>(
-<li   key={index} className='flex items-center '><span className='text-green-500 mr-2 '>✔</span> {item}</li>
+<li   key={index} className='flex items-center '><span className='text-green-500  mr-2 '>✔</span> {item}</li>
           ))
           }
 

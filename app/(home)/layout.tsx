@@ -15,9 +15,9 @@ const layout = ({children}:{
 
 <nav className='flex items-center justify-between max-w-7xl mx-auto py-2'>
 <Logo/>
-<div className='flex items-center gap-2'>
+<div className='flex items-center gap-3'>
 
-<Button variant={'link'}>Dashboard</Button>
+<Button variant={'link'} className='font-bold border px-3 py-2 bg-slate-900 text-gray-200  dark:bg-gray-200 dark:text-slate-900'>Dashboard</Button>
 <UserButton/>
 <DarkMode/>
 </div>
